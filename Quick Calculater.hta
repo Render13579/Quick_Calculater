@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculater</title>
+	<meta http-equiv="x-ua-compatible" content="IE=9"/>
+	<style>
+	body{
+		background-color:white;
+	}
+	</style>
+	<HTA:APPLICATION 
+	border="thin" 
+	borderStyle="static" 
+	caption="yes"  
+	maximizeButton="no" 
+	minimizeButton="yes" 
+	icon="#"
+	showInTaskbar="yes" 
+	windowState="normal"
+	innerBorder="yes"
+	navigable="yes"
+	scroll="no"
+	selection="no"
+	singleInstance="no"
+	contextMenu="yes"
+	scrollFlat="no"
+	version="1.4" />
+	<script language="javascript" type="text/javascript">
+   window.resizeTo(600,470);
+ </script>
+
+ <script>
+
+ </script>
+
+ <style>
+
+ body {
+ 	background-color:#DEDED9;
+ 	font-family:Courier New;
+ }
+
+ #space_bar {
+ 	width:600px;
+ 	height:15px;
+ }
+
+ #space_button {
+ 	width:225px;
+ 	height:5px;
+ 	float:left;
+ }
+
+ #display {
+ 	width:450px;
+ 	height:75px;
+ 	background-color:#0029A3;
+ 	margin:auto;
+ 	border:solid #222214 2px;
+ 	color:red;
+ 	font-size:70px;
+ 	border-radius:10px;
+ }
+
+ #button_field {
+ 	width:450px;
+ 	height:250px;
+ 	background-color:#0029A3;
+ 	margin:auto;
+ 	border:solid #222214 2px;
+ 	border-radius:10px;
+ }
+
+ div.button1 {
+ 	width:75px;
+ 	height:50px;
+ 	background-color:red;
+ 	border:solid #0029A3;
+ 	float:left;
+ 	font-size:40px;
+ 	text-align:center;
+ 	border-radius:10px;
+ }
+
+ div.button2 {
+ 	width:75px;
+ 	height:50px;
+ 	background-color:red;
+ 	border:solid #0029A3;
+ 	float:left;
+ 	font-size:40px;
+ 	text-align:center;
+ 	border-radius:10px;
+ }
+
+ div.button3 {
+ 	width:75px;
+ 	height:50px;
+ 	background-color:red;
+ 	border:solid #0029A3;
+ 	float:left;
+ 	font-size:40px;
+ 	text-align:center;
+ 	border-radius:10px;
+ }
+
+ div.button1:hover {
+ 	background-color:#FF7E00;
+ 	border:solid #FF7E00;
+ }
+
+ div.button2:hover {
+ 	background-color:#FF7E00;
+ 	border:solid #FF7E00;
+ }
+
+ div.button3:hover {
+ 	background-color:#FF7E00;
+ 	border:solid #FF7E00;
+ }
+
+ #numbers {
+ 	width:250px;
+ 	height:150px;
+ 	float:left;
+ }
+
+ #procs {
+ 	width:200px;
+ 	height:150px;
+ 	float:left;
+ }
+
+ div.buttonP {
+ 	width:90px;
+ 	height:50px;
+ 	background-color:red;
+ 	border:solid #0029A3;
+ 	float:left;
+ 	font-size:40px;
+ 	text-align:center;
+ 	border-radius:10px;
+ }
+
+ div.buttonP:hover {
+ 	background-color:#FF7E00;
+ 	border:solid #FF7E00;
+ }
+
+ #equals {
+ 	width:150px;
+ 	height:170px;
+ 	float:left;
+ }
+
+ #calculate {
+ 	width:430px;
+ 	height:65x;
+ 	background-color:red;
+ 	border:solid #0029A3;
+ 	float:left;
+ 	font-size:40px;
+ 	text-align:center;
+ 	border-radius:10px;
+ }
+
+ #calculate:hover {
+ 	background-color:#FF7E00;
+ 	border:solid #FF7E00;
+ }
+
+ </style>
+ <script type="text/javascript">
+
+ var val1 = 0;
+ var val2 = 0;
+ var process = "";
+ var result = 0;
+
+ function ONEclick(obj) {
+ 	document.getElementById("display").innerHTML="1";
+ 	if (val1 == 0) {
+ 		val1 = 1;
+ 	}
+ 	else {
+ 		val2 = 1;
+ 	}
+ }
+ function TWOclick(obj) {
+ 	document.getElementById("display").innerHTML="2";
+ 	if (val1 == 0) {
+ 		val1 = 2;
+ 	}
+ 	else {
+ 		val2 = 2;
+ 	}
+ }
+ function THREEclick(obj) {
+ 	document.getElementById("display").innerHTML="3";
+ 	if (val1 == 0) {
+ 		val1 = 3;
+ 	}
+ 	else {
+ 		val2 = 3;
+ 	}
+ }
+ function FOURclick(obj) {
+ 	document.getElementById("display").innerHTML="4";
+ 	if (val1 == 0) {
+ 		val1 = 4;
+ 	}
+ 	else {
+ 		val2 = 4;
+ 	}
+ }
+ function FIVEclick(obj) {
+ 	document.getElementById("display").innerHTML="5";
+ 	if (val1 == 0) {
+ 		val1 = 5;
+ 	}
+ 	else {
+ 		val2 = 5;
+ 	}
+ }
+ function SIXclick(obj) {
+ 	document.getElementById("display").innerHTML="6";
+ 	if (val1 == 0) {
+ 		val1 = 6;
+ 	}
+ 	else {
+ 		val2 = 6;
+ 	}
+ }
+ function SEVENclick(obj) {
+ 	document.getElementById("display").innerHTML="7";
+ 	if (val1 == 0) {
+ 		val1 = 7;
+ 	}
+ 	else {
+ 		val2 = 7;
+ 	}
+ }
+ function EIGHTclick(obj) {
+ 	document.getElementById("display").innerHTML="8";
+ 	if (val1 == 0) {
+ 		val1 = 8;
+ 	}
+ 	else {
+ 		val2 = 8;
+ 	}
+ }
+ function NINEclick(obj) {
+ 	document.getElementById("display").innerHTML="9";
+ 	if (val1 == 0) {
+ 		val1 = 9;
+ 	}
+ 	else {
+ 		val2 = 9;
+ 	}
+ }
+
+ function plus(obj) {
+ 	document.getElementById("display").innerHTML="+";
+ 	process = "+";
+ }
+ function minus(obj) {
+ 	document.getElementById("display").innerHTML="-";
+ 	process = "-";
+ }
+ function divide(obj) {
+ 	document.getElementById("display").innerHTML="/";
+ 	process = "/";
+ }
+ function multiply(obj) {
+ 	document.getElementById("display").innerHTML="*";
+ 	process = "*";
+ }
+
+ function equals(obj) {
+ 	if (process == "+") {
+ 		result = val1 + val2;
+ 		document.getElementById("display").innerHTML=result;
+ 		val1 = result;
+ 	}
+ 	else if (process == "-") {
+ 		result = val1 - val2;
+ 		document.getElementById("display").innerHTML=result;
+ 		val1 = result;
+ 	}
+ 	else if (process == "/") {
+ 		result = val1 / val2;
+ 		document.getElementById("display").innerHTML=result;
+ 		val1 = result;
+ 	}
+ 	else if (process == "*") {
+ 		result = val1 * val2;
+ 		document.getElementById("display").innerHTML=result;
+ 		val1 = result;
+ 	}
+ }
+
+ function clear(obj) {
+ 	document.getElementById("display").innerHTML="0";
+ 	val1 = 0;
+ 	val2 = 0;
+ 	process = "";
+ 	result = 0;
+ }
+
+
+ </script>
+</head>
+<body>
+	<div id="space_bar"></div>
+	<div id="display">0</div>
+	<div id="space_bar"></div>
+	<div id="button_field">
+	<div id="numbers">
+		<div id="1_button" class="button1" onclick="ONEclick(this)">1</div>
+		<div id="2_button" class="button1" onclick="TWOclick(this)">2</div>
+		<div id="3_button" class="button1" onclick="THREEclick(this)">3</div>
+		<div id="4_button" class="button2" onclick="FOURclick(this)">4</div>
+		<div id="5_button" class="button2" onclick="FIVEclick(this)">5</div>
+		<div id="6_button" class="button2" onclick="SIXclick(this)">6</div>
+		<div id="7_button" class="button3" onclick="SEVENclick(this)">7</div>
+		<div id="8_button" class="button3" onclick="EIGHTclick(this)">8</div>
+		<div id="9_button" class="button3" onclick="NINEclick(this)">9</div>
+	</div>
+	<div id="procs">
+		<div id="add_button" class="buttonP" onclick="plus(this)">+</div>
+		<div id="sub_button" class="buttonP" onclick="minus(this)">-</div>
+		<div id="div_button" class="buttonP" onclick="divide(this)">/</div>
+		<div id="multi_button" class="buttonP" onclick="multiply(this)">*</div>
+		<div id="clear_button" class="buttonP" style="width:180px;" onclick="clear(this)">CE</div>
+	</div>
+	<div id="space_bar"></div>
+	<div id="equals">
+		<div id="space_bar" style="height:30px;"></div>
+		<div id="calculate" onclick="equals(this)">=</div>
+	</div>
+</body>
+</html>
